@@ -1,9 +1,13 @@
 header.header 
     .header__column
-        i.fab.fa-youtube
+        a(herf=routes.home)
+            i.fab.fa-youtube
+    .header__column
+        form(action=routes.search, method="get")
+            input(type="text", palceholder="Search by term..", name="term")
     .header__column
         ul
             li
-                a(href="#") Join
+                a(href=routes.Join) Join
             li
-                a(herf="#") Log in
+                a(herf=routes.login) Log in
