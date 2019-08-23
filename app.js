@@ -7,13 +7,12 @@ import bodyParser from "body-parser";
 // import { userRouter } from "./router";
 import routes from "./routes";
 
-
-
 const app = express();
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from './routers/globalRouter';
 
+app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
